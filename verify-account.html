@@ -1,192 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,600;0,700;1,100&family=Jost:wght@300&display=swap" rel="stylesheet">
-  <title>Verify</title>
-</head>
-<body>
-  <style>
-    html {
-      box-sizing: border-box;
-    }
-     body {
-      font-family: "Archivo", sans-serif;
-      display: flex;
-      justify-content: center;
-      background-color: black;
-    }
-    .page-1 {
-      height: 70vh;
-      width: 50vw;
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .same {
-      background-color: #ffffff;
-    }
-    .page-1 h1 {
-      color: black;
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-    .content {
-      background-color: #ffffff;
-      width: 400px;
-      height: 358px;
-      border: 1px solid #E0E0E0;
-      text-align: center;
-      padding: 20px 60px 30px 60px;
-      margin-bottom: 20px;
-      margin-top: 50px;
-    }
-    h1 {
-      font-family: 'Archivo', sans-serif;
-      text-align: center;
-      margin-top: 50px;
-    }
-    .preHeader {
-      text-align: right;
-      font-size: 15px;
-      font-weight: 100;
-      background-color: #f9fafc;
-      width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-    }
-    .preHeader-p {
-      text-decoration: none;
-      color: #828282;
-      margin-right: 20px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@100&family=Jost:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@100&family=Jost:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Verify</title>
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Archivo', sans-serif;
+        display: block;
+        background-color: black;
+        margin: 0 auto;
+      }
+      .page-1 {
+        background-color: white;
+        margin: 0 auto;
+      }
+      .same {
+        background-color: #ffffff;
+      }
+      .page-1 h1 {
+        color: black;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .content {
+        background-color: #ffffff;
+        width: 400px;
+        height: 358px;
+        border: 1px solid #e0e0e0;
+        text-align: center;
+        padding: 20px 60px 30px 60px;
+        margin: 0 auto;
+      }
+      h2,
+      h1 {
+        color: #000000;
+      }
+      h1 {
+        font-family: 'Archivo', sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .preHeader {
+        text-align: right;
+        font-size: 15px;
+        font-weight: 100;
+        background-color: #f9fafc;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .preHeader-p {
+        text-decoration: none;
+        color: #828282;
+        margin-right: 20px;
+      }
 
-    button {
-      background-color: #2563eb;
-      border: none;
-      border-radius: 5px;
-      padding: 15px 45px 15px 45px;
-      font-size: 16px;
-      font-weight: 600;
-      color: white;
-      margin-top: 5px;
-      margin-bottom: 15px;
-      cursor: pointer;
-      line-height: 20px;
-    }
-    .footer {
-      width: 100%;
-      padding: 40px;
-      box-sizing: border-box;
-      text-align: center;
-      font-size: 15px;
-      font-weight: 100;
-      color: #828282;
-      margin: 0 0 0 0;
-      line-height: 25px;
-    }
-    .footer a {
-      color: #828282;
-      margin-right: 20px;
-      margin-top: 30px;
-    }
-    strong {
-      color: #2563eb;
-    }
-    .header {
-      box-sizing: border-box;
-      color: #828282;
-      margin: 0 0 0 0;
-      display: flex;
-      justify-content: center;
-    }
-    .logo {
-      display: inline;
-      width: 50px;
-      height: 25px;
-      margin: 55px 6px 0 0;
-    }
-    .timer {
-      display: inline;
-      width: 14px;
-      height: 16px;
-      margin: 0 5px 0 0;
-      float: left;
-    }
-    h2 {
-      font-family: 'Jost', sans-serif;
-      margin-bottom: 30px;
-      font-style: normal;
-    }
-    .message {
-      font-size: 15px;
-      font-weight: 500;
-      font-style: normal;
-      color: #4F4F4F;
-      line-height: 20px;
-      letter-spacing: 0.05em;
-    }
-    .message-end {
-      font-size: 13px;
-      font-weight: 400;
-      font-style: normal;
-      color: #4F4F4F;
-      line-height: 20px;
-      margin: 0;
-      box-sizing: border-box;
-      text-align: left;
-    }
-    hr {
-      border: 1px solid #E0E0E0;
-      width: 100%;
-      margin: 18px 0 30px 0;
-    }
-    .end {
-      font-size: 13px;
-      font-weight: 400;
-      font-style: normal;
-      color: #828282;
-      line-height: 20px;
-      margin: 0;
-      box-sizing: border-box;
-      text-align: left;
-    }
-  </style>
-   <div class="page-1">
+      button {
+        background-color: #2563eb;
+        border: none;
+        border-radius: 5px;
+        padding: 15px 45px 15px 45px;
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        line-height: 20px;
+      }
+      .footer {
+        width: 100%;
+        padding: 40px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 100;
+        color: #828282;
+        margin: 0 0 0 0;
+        line-height: 25px;
+      }
+      .footer a {
+        color: #828282;
+        margin-right: 20px;
+        margin-top: 30px;
+      }
+      strong {
+        color: #2563eb;
+      }
+      .header {
+        box-sizing: border-box;
+        color: #828282;
+        margin: 0;
+      }
+      .logo {
+        display: inline;
+        width: 50px;
+        height: 25px;
+        margin: 55px 6px 0 0;
+      }
+      .timer {
+        display: inline;
+        width: 14px;
+        height: 16px;
+        margin: 0 5px 0 0;
+        float: left;
+      }
+      p {
+        color: #4f4f4f;
+      }
+      h2 {
+        font-family: 'Jost', sans-serif;
+        margin-bottom: 30px;
+        font-style: normal;
+        font-weight: 400;
+      }
+      .message {
+        font-size: 15px;
+        font-weight: 500;
+        font-style: normal;
+        color: #4f4f4f;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+      }
+      .message-end {
+        font-size: 13px;
+        font-weight: 600;
+        font-style: normal;
+        color: #4F4F4F;
+        line-height: 20px;
+        margin: 0;
+        box-sizing: border-box;
+        text-align: left;
+      }
+      hr {
+        border: 1px solid #e0e0e0;
+        width: 100%;
+        margin: 18px 0 30px 0;
+      }
+      .end {
+        font-size: 13px;
+        font-weight: 400;
+        font-style: normal;
+        color: #828282;
+        line-height: 20px;
+        margin: 0;
+        box-sizing: border-box;
+        text-align: left;
+      }
+
+      .main-logo {
+          display:block;
+          margin-left:auto;
+          margin-right:auto;
+          margin-bottom: 40px;
+        }
+
+        .timer-logo {
+          float: left;
+          margin-right: 6px;
+        }
+
+        a {
+          font-weight: 600;
+          color: #171717;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <div class="page-1">
       <div class="preHeader">
         <a href="" target="_blank" class="preHeader-p">View in browser →</a>
       </div>
       <div class="header same">
-        <img class="logo" src="/Vector.jpg" alt="Rental logo" />
-        <h1>Rental</h1>
+        <img src="http://drive.google.com/uc?export=view&id=1Rtm3lpaYB1FP3nd0WoIlo5PW-DkYmDFT" alt="logo" title="Logo" style="display:block" width="200" height="87" class="main-logo" />
       </div>
       <div class="content same">
-        <h2>Verify your email</h2>
-        <p class="message">
-         If you did not sign up at <strong>Rental</strong>, ignore this email.
+        <h2 style="font-family: 'Jost', sans-serif">Verify your email</h2>
+        <p class="message" style="font-family: 'Archivo', sans-serif">
+          If you did not sign up at <strong>Rental</strong>, ignore this email.
         </p>
-        <p>Use the button below to verify your account</p>
+        <p style="font-family: 'Archivo', sans-serif">
+          Use the button below to verify your account
+        </p>
         <button type="reset">Verify account</button>
-        <hr>
-        <img class="timer" src="/timer (1).png" alt="Timer icon"/>
-        <p class="message-end">This link expires in 15 minutes.</p>
-        <p class="end">Lorem ipsum dolor sit amet consectetur adipisicing elit.Ea, recusan.
-          <br />Laboriosam, distinctio. Ea, recusandae officiis.</p>
+        <hr />
+        <div>
+          <div>
+            <img src="http://drive.google.com/uc?export=view&id=1OSLGYVc4uMI5DJy57GFnUrUVRlmMpK-M" class="timer-logo"/>
+            <p class="message-end" style="font-family: 'Archivo', sans-serif">
+              This link expires in 15 minutes.
+            </p>
+          </div>
+          <p class="end" style="font-family: 'Archivo', sans-serif">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.Ea, recusan.
+            <br />Laboriosam, distinctio. Ea, recusandae officiis.
+          </p>
+        </div>
       </div>
       <div class="footer same">
-        <p>
+        <p style="font-family: 'Archivo', sans-serif">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           <br />Laboriosam, distinctio. Ea, recusandae officiis.
         </p>
 
-        <a href="http://">Privacy</a>
-        <a href="http://">Account</a>
-        <a href="http://">Unsubscribe</a>
+        <a href="http://" style="font-family: 'Archivo', sans-serif">Privacy</a>
+        <a href="http://" style="font-family: 'Archivo', sans-serif">Account</a>
+        <a href="http://" style="font-family: 'Archivo', sans-serif"
+          >Unsubscribe</a
+        >
       </div>
     </div>
-</body>
+  </body>
 </html>
